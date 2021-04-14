@@ -17,7 +17,7 @@ func main() {
 	// You can't modify a position in the string, but you can access to it
 	fmt.Printf("%v/%v/%v \n", date, month, string(converted[0])) //byte converted to letter
 	fmt.Printf("%v/%v/%v \n", date, month, converted[0])         // byte as ascii code
-	//mathOperations()
+	mathOperations()
 	//booleanTest()
 	//bitShifting()
 }
@@ -27,8 +27,8 @@ func mathOperations() {
 	var first float32 = 16.5
 	var second float32 = 12.4
 
-	fmt.Println(first + second)
-	fmt.Println((float64(first) / float64(second)))
+	fmt.Printf("%.2f \n", (first + second))
+	fmt.Printf("%.3f \n", (float64(first) / float64(second)))
 	// Error: print((floa64(first) / second))
 	// println((float64(first) / float64(second)) -> +1.330645e+000 == Not good
 	// I can create a complex number (real + imaginary -> 5+8i) buuuut I don't wanna do it now
