@@ -7,28 +7,31 @@ import (
 
 var date = 16
 
+//println is fine for basic operations, but fmt.Println is the right way to do it
 func main() {
 	/*var date int
 	date = 16*/
 	var month int = 12
 	year := 99
-	converted := strconv.Itoa(year)
-	fmt.Printf("%v %v %v \n", date, month, converted)
-
+	converted := strconv.Itoa(year) //strings are bytes arrays, so each byte is treated like that, a NUMBER in the ascci code
+	// You can't modify a position in the string, but you can access to it
+	fmt.Printf("%v/%v/%v \n", date, month, string(converted[0])) //byte converted to letter
+	fmt.Printf("%v/%v/%v \n", date, month, converted[0])         // byte as ascii code
 	//mathOperations()
 	//booleanTest()
-	bitShifting()
+	//bitShifting()
 }
 
 func mathOperations() {
 
-	first := 16
-	second := 12
+	var first float32 = 16.5
+	var second float32 = 12.4
 
-	println(first + second)
-	println((float32(first) / float32(second)))
-	// Error: print((float32(first) / second))
-
+	fmt.Println(first + second)
+	fmt.Println((float64(first) / float64(second)))
+	// Error: print((floa64(first) / second))
+	// println((float64(first) / float64(second)) -> +1.330645e+000 == Not good
+	// I can create a complex number (real + imaginary -> 5+8i) buuuut I don't wanna do it now
 }
 func booleanTest() {
 	println("---- Booleans --")
