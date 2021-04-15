@@ -5,12 +5,9 @@ import (
 	"strconv"
 )
 
-var date = 16
-
 //println is fine for basic operations, but fmt.Println is the right way to do it
 func StringsTest() {
-	/*var date int
-	date = 16*/
+	var date int = 16
 	var month int = 12
 	year := 99
 	converted := strconv.Itoa(year) //strings are bytes arrays, so each byte is treated like that, a NUMBER in the ascci code
